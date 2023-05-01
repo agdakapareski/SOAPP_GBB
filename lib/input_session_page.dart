@@ -134,6 +134,8 @@ class _InputSessionPageState extends State<InputSessionPage> {
                     selisih: 0 - d.saldoItem!,
                     status: 0,
                     keterangan: '-',
+                    statusBarang: d.statusBarang,
+                    lokasi: d.lokasi,
                   );
                   createItemCounts.add(itemCount);
                 }
@@ -142,10 +144,11 @@ class _InputSessionPageState extends State<InputSessionPage> {
 
                 Route route = MaterialPageRoute(
                   builder: (context) => StockCountPage(
-                      sesi.id,
-                      idController.text,
-                      tanggalController.text,
-                      picController.text),
+                    sesi.id,
+                    idController.text,
+                    tanggalController.text,
+                    picController.text,
+                  ),
                 );
                 Navigator.pushReplacement(context, route);
               });

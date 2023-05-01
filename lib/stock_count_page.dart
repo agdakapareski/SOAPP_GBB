@@ -88,8 +88,16 @@ class _StockCountPageState extends State<StockCountPage> {
     List<List<String>> data = [];
 
     /// memasukkan header
-    data.add(
-        ["KODE", "NAMA", "SALDO", "HASIL HITUNGAN", "SELISIH", "KETERANGAN"]);
+    data.add([
+      "KODE",
+      "NAMA",
+      "SALDO",
+      "HASIL HITUNGAN",
+      "SELISIH",
+      "KETERANGAN",
+      "STATUS ITEM",
+      "LOKASI"
+    ]);
 
     /// memasukkan data item ke dalam list
     List<ItemCount> combine = await Db().getItemCounts(widget.idSesi!);
@@ -101,6 +109,8 @@ class _StockCountPageState extends State<StockCountPage> {
         i.hitung.toString(),
         i.selisih.toString(),
         i.keterangan ?? '-',
+        i.statusBarang ?? '-',
+        i.lokasi ?? '-',
       ]);
     }
 
@@ -466,6 +476,8 @@ class _StockCountPageState extends State<StockCountPage> {
                 item.hitung,
                 item.status,
                 item.keterangan,
+                item.statusBarang,
+                item.lokasi,
               ),
             );
 

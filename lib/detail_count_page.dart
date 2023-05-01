@@ -24,6 +24,8 @@ class DetailCountPage extends StatefulWidget {
   final int? hitung;
   final int? status;
   final String? keterangan;
+  final String? statusBarang;
+  final String? lokasi;
 
   const DetailCountPage(
       this.id,
@@ -38,6 +40,8 @@ class DetailCountPage extends StatefulWidget {
       this.hitung,
       this.status,
       this.keterangan,
+      this.statusBarang,
+      this.lokasi,
       {Key? key})
       : super(key: key);
 
@@ -164,6 +168,9 @@ class _DetailCountPageState extends State<DetailCountPage> {
                   keterangan: keteranganController.text == ''
                       ? '-'
                       : keteranganController.text,
+                  statusBarang:
+                      widget.statusBarang == '' ? '-' : widget.statusBarang,
+                  lokasi: widget.lokasi == '' ? '-' : widget.lokasi,
                 );
 
                 setState(() {
@@ -197,6 +204,26 @@ class _DetailCountPageState extends State<DetailCountPage> {
             children: [
               const Text('Kode Item :'),
               Text(widget.kodeItem!),
+            ],
+          ),
+          const SizedBox(
+            height: 5,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text('Status Item :'),
+              Text(widget.statusBarang!),
+            ],
+          ),
+          const SizedBox(
+            height: 5,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text('Lokasi Item :'),
+              Text(widget.lokasi!),
             ],
           ),
           const SizedBox(

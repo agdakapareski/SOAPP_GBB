@@ -5,6 +5,8 @@ class Item {
   int? box;
   int? unit;
   int? saldoItem;
+  String? statusBarang;
+  String? lokasi;
 
   Item({
     this.kodeItem,
@@ -13,5 +15,7 @@ class Item {
     this.box,
     this.unit,
     this.saldoItem,
+    this.statusBarang,
+    this.lokasi,
   });
 }

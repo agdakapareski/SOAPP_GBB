@@ -28,6 +28,8 @@ class Db {
       "selisih INTEGER, "
       "status INTEGER, "
       "keterangan LONGTEXT, "
+      "status_barang TEXT, "
+      "lokasi LONGTEXT, "
       "FOREIGN KEY (id_sesi) "
       "REFERENCES sesi(id) "
       "ON DELETE CASCADE)";
@@ -139,7 +141,9 @@ class Db {
         'hitung',
         'selisih',
         'status',
-        'keterangan'
+        'keterangan',
+        'status_barang',
+        'lokasi'
       ],
       where: 'id_sesi = ?',
       whereArgs: [id],
