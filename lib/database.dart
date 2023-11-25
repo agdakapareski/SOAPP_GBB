@@ -34,6 +34,8 @@ class Db {
       "REFERENCES sesi(id) "
       "ON DELETE CASCADE)";
 
+  static const updateItemCountsTable = "ALTER TABLE $table2 ADD label_qc TEXT";
+
   static const sesiTable = "CREATE TABLE $table1("
       "id INTEGER PRIMARY KEY AUTOINCREMENT, "
       "kode_sesi TEXT, "
@@ -62,9 +64,10 @@ class Db {
     String path = join(documentsDirectory.path, dbName);
     var db = await openDatabase(
       path,
-      version: 1,
+      version: 2,
       onCreate: _onCreate,
       onConfigure: _onConfigure,
+      onUpgrade: _onUpgrade,
     );
     return db;
   }
@@ -77,6 +80,12 @@ class Db {
     await db.execute(sesiTable);
     await db.execute(itemCountstable);
     await db.execute(historiTable);
+  }
+
+  _onUpgrade(Database db, int oldVersion, int newVersion) async {
+    if (oldVersion == 1) {
+      await db.execute(updateItemCountsTable);
+    }
   }
 
   saveSesi(Sesi sesi) async {
@@ -143,7 +152,8 @@ class Db {
         'status',
         'keterangan',
         'status_barang',
-        'lokasi'
+        'lokasi',
+        'label_qc',
       ],
       where: 'id_sesi = ?',
       whereArgs: [id],

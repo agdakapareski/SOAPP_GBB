@@ -136,6 +136,7 @@ class _InputSessionPageState extends State<InputSessionPage> {
                     keterangan: '-',
                     statusBarang: d.statusBarang,
                     lokasi: d.lokasi,
+                    labelQc: d.labelQc,
                   );
                   createItemCounts.add(itemCount);
                 }

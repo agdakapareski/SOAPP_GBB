@@ -32,10 +32,10 @@ class _SplashScreenState extends State<SplashScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Expanded(
+              const Expanded(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
-                  children: const [
+                  children: [
                     SizedBox(),
                   ],
                 ),
@@ -51,10 +51,10 @@ class _SplashScreenState extends State<SplashScreen> {
                   fontSize: 25,
                 ),
               ),
-              Expanded(
+              const Expanded(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
-                  children: const [
+                  children: [
                     Text(
                       'Developed by :',
                       style: TextStyle(

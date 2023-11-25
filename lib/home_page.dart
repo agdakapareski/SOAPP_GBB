@@ -92,6 +92,7 @@ class _HomePageState extends State<HomePage> {
         saldoItem: item[5].runtimeType == String ? int.parse(item[5]) : item[5],
         statusBarang: item[6],
         lokasi: item[7],
+        labelQc: item[8],
       );
 
       setState(() {

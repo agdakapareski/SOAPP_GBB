@@ -7,6 +7,7 @@ class Item {
   int? saldoItem;
   String? statusBarang;
   String? lokasi;
+  String? labelQc;
 
   Item({
     this.kodeItem,
@@ -17,5 +18,6 @@ class Item {
     this.saldoItem,
     this.statusBarang,
     this.lokasi,
+    this.labelQc,
   });
 }
