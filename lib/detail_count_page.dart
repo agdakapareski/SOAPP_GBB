@@ -17,9 +17,9 @@ class DetailCountPage extends StatefulWidget {
   final String? kodeItem;
   final String? namaItem;
   final String? kodeSesi;
-  final int? carton;
-  final int? box;
-  final int? unit;
+  // final int? carton;
+  // final int? box;
+  // final int? unit;
   final int? saldoItem;
   final int? hitung;
   final int? status;
@@ -34,9 +34,9 @@ class DetailCountPage extends StatefulWidget {
       this.kodeItem,
       this.namaItem,
       this.kodeSesi,
-      this.carton,
-      this.box,
-      this.unit,
+      // this.carton,
+      // this.box,
+      // this.unit,
       this.saldoItem,
       this.hitung,
       this.status,
@@ -160,9 +160,9 @@ class _DetailCountPageState extends State<DetailCountPage> {
                   kodeItem: widget.kodeItem,
                   namaItem: widget.namaItem,
                   kodeSesi: widget.kodeSesi,
-                  carton: widget.carton,
-                  box: widget.box,
-                  unit: widget.unit,
+                  // carton: widget.carton,
+                  // box: widget.box,
+                  // unit: widget.unit,
                   saldoItem: widget.saldoItem,
                   hitung: subtotal,
                   selisih: selisih,
@@ -256,36 +256,36 @@ class _DetailCountPageState extends State<DetailCountPage> {
             'Master Data',
             style: TextStyle(fontWeight: FontWeight.bold),
           ),
-          const SizedBox(
-            height: 5,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text('Unit / Karton :'),
-              Text('${widget.carton!}'),
-            ],
-          ),
-          const SizedBox(
-            height: 5,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text('Unit / Box :'),
-              Text('${widget.box!}'),
-            ],
-          ),
-          const SizedBox(
-            height: 5,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text('Unit :'),
-              Text('${widget.unit!}'),
-            ],
-          ),
+          // const SizedBox(
+          //   height: 5,
+          // ),
+          // Row(
+          //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //   children: [
+          //     const Text('Unit / Karton :'),
+          //     Text('${widget.carton!}'),
+          //   ],
+          // ),
+          // const SizedBox(
+          //   height: 5,
+          // ),
+          // Row(
+          //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //   children: [
+          //     const Text('Unit / Box :'),
+          //     Text('${widget.box!}'),
+          //   ],
+          // ),
+          // const SizedBox(
+          //   height: 5,
+          // ),
+          // Row(
+          //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //   children: [
+          //     const Text('Unit :'),
+          //     Text('${widget.unit!}'),
+          //   ],
+          // ),
           const SizedBox(
             height: 5,
           ),
@@ -349,82 +349,82 @@ class _DetailCountPageState extends State<DetailCountPage> {
                 controller: jumlahController,
                 keyboardType: TextInputType.number,
               ),
-              const SizedBox(
-                height: 15,
-              ),
-              Row(
-                children: [
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          satuanFlag = 3;
-                        });
-                      },
-                      child: Container(
-                        color: satuanFlag == 3 ? warnaUtama : Colors.white,
-                        height: 50,
-                        child: Center(
-                          child: Text(
-                            'carton',
-                            style: TextStyle(
-                              color: satuanFlag == 3
-                                  ? Colors.grey[50]
-                                  : Colors.black,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          satuanFlag = 2;
-                        });
-                      },
-                      child: Container(
-                        color: satuanFlag == 2 ? warnaUtama : Colors.white,
-                        height: 50,
-                        child: Center(
-                          child: Text(
-                            'box',
-                            style: TextStyle(
-                              color: satuanFlag == 2
-                                  ? Colors.grey[50]
-                                  : Colors.black,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          satuanFlag = 1;
-                        });
-                      },
-                      child: Container(
-                        color: satuanFlag == 1 ? warnaUtama : Colors.white,
-                        height: 50,
-                        child: Center(
-                          child: Text(
-                            'unit',
-                            style: TextStyle(
-                              color: satuanFlag == 1
-                                  ? Colors.grey[50]
-                                  : Colors.black,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              // const SizedBox(
+              //   height: 15,
+              // ),
+              // Row(
+              //   children: [
+              //     Expanded(
+              //       child: GestureDetector(
+              //         onTap: () {
+              //           setState(() {
+              //             satuanFlag = 3;
+              //           });
+              //         },
+              //         child: Container(
+              //           color: satuanFlag == 3 ? warnaUtama : Colors.white,
+              //           height: 50,
+              //           child: Center(
+              //             child: Text(
+              //               'carton',
+              //               style: TextStyle(
+              //                 color: satuanFlag == 3
+              //                     ? Colors.grey[50]
+              //                     : Colors.black,
+              //               ),
+              //             ),
+              //           ),
+              //         ),
+              //       ),
+              //     ),
+              //     Expanded(
+              //       child: GestureDetector(
+              //         onTap: () {
+              //           setState(() {
+              //             satuanFlag = 2;
+              //           });
+              //         },
+              //         child: Container(
+              //           color: satuanFlag == 2 ? warnaUtama : Colors.white,
+              //           height: 50,
+              //           child: Center(
+              //             child: Text(
+              //               'box',
+              //               style: TextStyle(
+              //                 color: satuanFlag == 2
+              //                     ? Colors.grey[50]
+              //                     : Colors.black,
+              //               ),
+              //             ),
+              //           ),
+              //         ),
+              //       ),
+              //     ),
+              //     Expanded(
+              //       child: GestureDetector(
+              //         onTap: () {
+              //           setState(() {
+              //             satuanFlag = 1;
+              //           });
+              //         },
+              //         child: Container(
+              //           color: satuanFlag == 1 ? warnaUtama : Colors.white,
+              //           height: 50,
+              //           child: Center(
+              //             child: Text(
+              //               'unit',
+              //               style: TextStyle(
+              //                 color: satuanFlag == 1
+              //                     ? Colors.grey[50]
+              //                     : Colors.black,
+              //               ),
+              //             ),
+              //           ),
+              //         ),
+              //       ),
+              //     ),
+              //   ],
+              // ),
             ],
           ),
           const SizedBox(
@@ -514,20 +514,20 @@ class _DetailCountPageState extends State<DetailCountPage> {
                     Histori h = Histori();
                     setState(() {
                       if (jumlahController.text != '') {
-                        if (satuanFlag == 1) {
-                          subtotal = subtotal +
-                              (int.parse(jumlahController.text) * widget.unit!);
-                          h.satuan = 'unit';
-                        } else if (satuanFlag == 2) {
-                          subtotal = subtotal +
-                              (int.parse(jumlahController.text) * widget.box!);
-                          h.satuan = 'box';
-                        } else {
-                          subtotal = subtotal +
-                              (int.parse(jumlahController.text) *
-                                  widget.carton!);
-                          h.satuan = 'carton';
-                        }
+                        // if (satuanFlag == 1) {
+                        subtotal =
+                            subtotal + (int.parse(jumlahController.text));
+                        //   h.satuan = 'unit';
+                        // } else if (satuanFlag == 2) {
+                        //   subtotal = subtotal +
+                        //       (int.parse(jumlahController.text) * widget.box!);
+                        //   h.satuan = 'box';
+                        // } else {
+                        //   subtotal = subtotal +
+                        //       (int.parse(jumlahController.text) *
+                        //           widget.carton!);
+                        //   h.satuan = 'carton';
+                        // }
                         selisih = subtotal - widget.saldoItem!;
                         historiProvider.saveHistori(
                           Histori(
@@ -586,12 +586,12 @@ class _DetailCountPageState extends State<DetailCountPage> {
                                     color: Colors.white,
                                   ),
                                 ),
-                                Text(
-                                  histori.satuan!,
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                  ),
-                                ),
+                                // Text(
+                                //   histori.satuan!,
+                                //   style: const TextStyle(
+                                //     color: Colors.white,
+                                //   ),
+                                // ),
                               ],
                             ),
                           ),

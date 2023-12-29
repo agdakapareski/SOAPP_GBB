@@ -4,9 +4,9 @@ class ItemCount {
   String? kodeItem;
   String? namaItem;
   String? kodeSesi;
-  int? carton;
-  int? box;
-  int? unit;
+  // int? carton;
+  // int? box;
+  // int? unit;
   int? saldoItem;
   int? hitung;
   int? selisih;
@@ -22,9 +22,9 @@ class ItemCount {
     this.kodeItem,
     this.namaItem,
     this.kodeSesi,
-    this.carton,
-    this.box,
-    this.unit,
+    // this.carton,
+    // this.box,
+    // this.unit,
     this.saldoItem,
     this.hitung,
     this.selisih,
@@ -41,9 +41,9 @@ class ItemCount {
         'kode_item': kodeItem,
         'nama_item': namaItem,
         'kode_sesi': kodeSesi,
-        'carton': carton,
-        'box': box,
-        'unit': unit,
+        // 'carton': carton,
+        // 'box': box,
+        // 'unit': unit,
         'saldo_item': saldoItem,
         'hitung': hitung,
         'selisih': selisih,
@@ -60,9 +60,9 @@ class ItemCount {
         kodeItem: json['kode_item'],
         namaItem: json['nama_item'],
         kodeSesi: json['kode_sesi'],
-        carton: json['carton'],
-        box: json['box'],
-        unit: json['unit'],
+        // carton: json['carton'],
+        // box: json['box'],
+        // unit: json['unit'],
         saldoItem: json['saldo_item'],
         hitung: json['hitung'],
         selisih: json['selisih'],

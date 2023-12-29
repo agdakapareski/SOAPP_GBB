@@ -86,13 +86,13 @@ class _HomePageState extends State<HomePage> {
       Item a = Item(
         kodeItem: item[0],
         namaItem: item[1],
-        carton: item[2].runtimeType == String ? int.parse(item[2]) : item[2],
-        box: item[3].runtimeType == String ? int.parse(item[3]) : item[3],
-        unit: item[4].runtimeType == String ? int.parse(item[4]) : item[4],
-        saldoItem: item[5].runtimeType == String ? int.parse(item[5]) : item[5],
-        statusBarang: item[6],
-        lokasi: item[7],
-        labelQc: item[8],
+        // carton: item[2].runtimeType == String ? int.parse(item[2]) : item[2],
+        // box: item[3].runtimeType == String ? int.parse(item[3]) : item[3],
+        // unit: item[4].runtimeType == String ? int.parse(item[4]) : item[4],
+        saldoItem: item[2].runtimeType == String ? int.parse(item[2]) : item[2],
+        statusBarang: item[3],
+        lokasi: item[4],
+        labelQc: item[5].runtimeType == int ? item[5].toString() : item[5],
       );
 
       setState(() {
